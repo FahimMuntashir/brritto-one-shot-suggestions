@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSC One Shot Suggestions | Brritto</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #E8390E;
+      --primary-dark: #c22d08;
+      --primary-light: #ff6b3d;
+      --surface: #ffffff;
+      --bg: #f5f6fa;
+      --text: #1a1a2e;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --success: #10b981;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow: 0 4px 16px rgba(0,0,0,0.10);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .logo-mark {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px; color: #fff; letter-spacing: -1px;
+    }
+    .logo-text { font-size: 20px; font-weight: 800; color: var(--text); }
+    .logo-text span { color: var(--primary); }
+    .header-badge {
+      background: #fff3f0; color: var(--primary);
+      border: 1px solid #fecdc5;
+      padding: 4px 12px; border-radius: 20px;
+      font-size: 12px; font-weight: 600;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #16213e 100%);
+      color: #fff; text-align: center;
+      padding: 64px 24px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 20%, rgba(232,57,14,0.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(232,57,14,0.10) 0%, transparent 50%);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(232,57,14,0.2); border: 1px solid rgba(232,57,14,0.4);
+      color: #ff8c6a; padding: 6px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--primary); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900; line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--primary-light); }
+    .hero p {
+      font-size: 17px; color: rgba(255,255,255,0.75);
+      max-width: 520px; margin: 0 auto 32px;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-value { font-size: 26px; font-weight: 800; color: #fff; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+
+    /* ── MAIN CONTAINER ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── GATE SECTION (form) ── */
+    #gate-section {
+      padding: 48px 24px 64px;
+      display: flex; justify-content: center;
+    }
+    .gate-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      width: 100%; max-width: 520px;
+      overflow: hidden;
+    }
+    .gate-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #c22d08 100%);
+      padding: 32px 36px 28px;
+      color: #fff;
+    }
+    .gate-header .icon {
+      width: 52px; height: 52px; background: rgba(255,255,255,0.2);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 16px;
+    }
+    .gate-header h2 { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+    .gate-header p { font-size: 14px; opacity: 0.85; line-height: 1.5; }
+    .gate-body { padding: 32px 36px 36px; }
+
+    .form-group { margin-bottom: 20px; }
+    .form-label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .form-label .required { color: var(--primary); }
+    .form-hint { font-size: 11px; color: var(--text-muted); font-weight: 400; margin-left: 2px; }
+
+    .input-wrap { position: relative; }
+    .form-input, .form-select {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 15px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--surface);
+      appearance: none;
+    }
+    .form-input:focus, .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(232,57,14,0.08);
+    }
+    .form-input.error { border-color: #ef4444; }
+    .form-input.error:focus { box-shadow: 0 0 0 4px rgba(239,68,68,0.08); }
+    .form-input.valid { border-color: var(--success); }
+
+    .phone-wrap { display: flex; gap: 0; }
+    .phone-prefix {
+      background: #f9fafb; border: 2px solid var(--border);
+      border-right: none; border-radius: 10px 0 0 10px;
+      padding: 12px 14px; font-size: 15px; font-weight: 600;
+      color: var(--text-muted); white-space: nowrap;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .phone-prefix .flag { font-size: 18px; }
+    .phone-wrap .form-input {
+      border-radius: 0 10px 10px 0;
+      border-left: none;
+    }
+    .phone-wrap .form-input:focus { border-left: none; }
+
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '▾'; position: absolute; right: 14px; top: 50%;
+      transform: translateY(-50%); pointer-events: none;
+      color: var(--text-muted); font-size: 13px;
+    }
+
+    .field-error {
+      font-size: 12px; color: #ef4444; margin-top: 6px;
+      display: flex; align-items: center; gap: 4px;
+      min-height: 0; overflow: hidden;
+      transition: all 0.2s;
+    }
+    .field-error.hidden { display: none; }
+
+    .btn-submit {
+      width: 100%; padding: 14px;
+      background: var(--primary); color: #fff;
+      font-size: 16px; font-weight: 700;
+      border: none; border-radius: 10px;
+      cursor: pointer; margin-top: 8px;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-submit:hover { background: var(--primary-dark); box-shadow: 0 4px 20px rgba(232,57,14,0.35); }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; }
+
+    .gate-note {
+      margin-top: 16px; text-align: center;
+      font-size: 12px; color: var(--text-muted);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .gate-note svg { flex-shrink: 0; }
+
+    /* ── PORTAL SECTION ── */
+    #portal-section { display: none; padding-bottom: 64px; }
+
+    .portal-banner {
+      background: linear-gradient(135deg, #0f2027, #1a3a4e);
+      padding: 28px 24px;
+      border-bottom: 3px solid var(--primary);
+    }
+    .portal-banner-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .welcome-text { color: #fff; }
+    .welcome-text h3 { font-size: 18px; font-weight: 700; }
+    .welcome-text p { font-size: 14px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+    .portal-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+    .meta-chip {
+      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 600;
+    }
+    .meta-chip span { color: var(--primary-light); margin-right: 4px; }
+
+    .portal-body { max-width: 1100px; margin: 0 auto; padding: 40px 24px 0; }
+
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 24px; flex-wrap: wrap; gap: 12px;
+    }
+    .section-title {
+      font-size: 20px; font-weight: 800; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title::before {
+      content: ''; width: 4px; height: 22px;
+      background: var(--primary); border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-bar {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .filter-btn {
+      padding: 8px 18px; border-radius: 30px;
+      border: 2px solid var(--border);
+      background: var(--surface); color: var(--text-muted);
+      font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .filter-btn.active {
+      background: var(--primary); border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* ── SUBJECT CARDS ── */
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .subject-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .subject-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+    .card-color-bar { height: 4px; }
+
+    .card-body { padding: 20px; }
+    .card-top { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .card-info { flex: 1; min-width: 0; }
+    .card-group {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px;
+    }
+    .card-title { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+    .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .tag {
+      font-size: 11px; font-weight: 600; padding: 3px 10px;
+      border-radius: 20px; background: #f3f4f6; color: var(--text-muted);
+    }
+    .tag.new { background: #fef3c7; color: #d97706; }
+    .tag.hot { background: #fee2e2; color: #dc2626; }
+
+    .card-actions { display: flex; gap: 8px; }
+    .btn-preview, .btn-download {
+      flex: 1; padding: 9px 12px;
+      border-radius: 8px; font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      border: none;
+    }
+    .btn-preview {
+      background: #f3f4f6; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-preview:hover { background: #e5e7eb; }
+    .btn-download {
+      background: var(--primary); color: #fff;
+    }
+    .btn-download:hover { background: var(--primary-dark); }
+
+    .card-footer {
+      padding: 10px 20px;
+      background: #fafafa; border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; color: var(--text-muted);
+    }
+    .card-footer .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
+
+    /* ── COMING SOON CARD ── */
+    .subject-card.coming-soon { opacity: 0.7; }
+    .subject-card.coming-soon .btn-preview,
+    .subject-card.coming-soon .btn-download {
+      cursor: not-allowed; opacity: 0.5;
+    }
+    .coming-label {
+      font-size: 11px; font-weight: 700;
+      color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    /* ── PDF MODAL ── */
+    #pdf-modal {
+      position: fixed; inset: 0; z-index: 1000;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    #pdf-modal.open { display: flex; }
+    .modal-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.65); backdrop-filter: blur(4px);
+    }
+    .modal-box {
+      position: relative; z-index: 1;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      width: 100%; max-width: 820px;
+      max-height: 90vh;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px;
+    }
+    .modal-title { font-size: 16px; font-weight: 700; }
+    .modal-subject-tag {
+      font-size: 11px; font-weight: 600;
+      background: #fff3f0; color: var(--primary);
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .modal-close {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: #f3f4f6; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--text-muted);
+      transition: background 0.2s;
+      margin-left: auto;
+    }
+    .modal-close:hover { background: #e5e7eb; }
+    .modal-body {
+      flex: 1; overflow: hidden;
+      background: #2d2d2d;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 420px;
+    }
+    .pdf-frame {
+      width: 100%; height: 70vh; border: none;
+    }
+    .modal-footer {
+      padding: 14px 24px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .modal-note { font-size: 12px; color: var(--text-muted); }
+    .btn-modal-download {
+      padding: 10px 24px;
+      background: var(--primary); color: #fff;
+      border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: background 0.2s;
+      display: flex; align-items: center; gap: 8px;
+      text-decoration: none;
+    }
+    .btn-modal-download:hover { background: var(--primary-dark); }
+
+    /* ── TOAST ── */
+    #toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 2000;
+      background: var(--text); color: #fff;
+      padding: 12px 20px; border-radius: 10px;
+      font-size: 14px; font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(80px); opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
+      display: flex; align-items: center; gap: 10px;
+    }
+    #toast.show { transform: translateY(0); opacity: 1; }
+    #toast.success { background: #065f46; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center; padding: 60px 20px; color: var(--text-muted);
+    }
+    .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-state p { font-size: 15px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 48px 20px 60px; }
+      .hero-stats { gap: 24px; }
+      .gate-header, .gate-body { padding: 24px; }
+      .subjects-grid { grid-template-columns: 1fr; }
+      .modal-box { max-height: 95vh; border-radius: 12px; }
+      .pdf-frame { height: 55vh; }
+      .portal-meta { display: none; }
+    }
+
+    /* ── SCROLL ANIMATION ── */
+    .fade-in {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">B</div>
+      <span class="logo-text">brri<span>tto</span></span>
+    </a>
+    <div class="header-badge">🎯 HSC One Shot 2026</div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      FREE SUGGESTION SERIES — LIMITED TIME
+    </div>
+    <h1>HSC <span>One Shot</span><br>Suggestion PDFs 2026</h1>
+    <p>
+      Expert-curated, subject-wise suggestions crafted to maximize your HSC preparation.
+      100% free — just tell us a bit about yourself to get started.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Subjects Covered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Free Access</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">2026</div>
+        <div class="stat-label">HSC Batch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GATE SECTION ── -->
+<section id="gate-section">
+  <div class="gate-card">
+    <div class="gate-header">
+      <div class="icon">📋</div>
+      <h2>Unlock Your Free Suggestions</h2>
+      <p>Fill in your details once and get instant access to all subject-wise HSC suggestion PDFs — no payment, no signup.</p>
+    </div>
+    <div class="gate-body">
+      <form id="student-form" novalidate>
+
+        <div class="form-group">
+          <label class="form-label" for="full-name">
+            Full Name <span class="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text" id="full-name" class="form-input"
+              placeholder="e.g. Farhan Ahmed"
+              autocomplete="name"
+            />
+          </div>
+          <div class="field-error hidden" id="name-error">⚠ Please enter a valid full name (letters only, at least 2 characters).</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="mobile">
+            Mobile Number <span class="required">*</span>
+            <span class="form-hint">— Bangladeshi number</span>
+          </label>
+          <div class="phone-wrap">
+            <div class="phone-prefix">
+              <span class="flag">🇧🇩</span>
+              +880
+            </div>
+            <input
+              type="tel" id="mobile" class="form-input"
+              placeholder="17XXXXXXXX"
+              maxlength="10"
+              autocomplete="tel"
+            />
+          </div>
+          <div class="field-error hidden" id="mobile-error">⚠ Enter a valid 10-digit Bangladeshi number (e.g. 1712345678).</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="hsc-class">
+            Your HSC Batch <span class="required">*</span>
+          </label>
+          <div class="select-wrap">
+            <select id="hsc-class" class="form-select form-input">
+              <option value="" disabled selected>Select your batch</option>
+              <option value="HSC 2026">HSC 2026</option>
+              <option value="HSC 2027">HSC 2027</option>
+              <option value="HSC 2028">HSC 2028</option>
+            </select>
+          </div>
+          <div class="field-error hidden" id="class-error">⚠ Please select your HSC batch.</div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submit-btn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Access Free Suggestions
+        </button>
+
+      </form>
+      <p class="gate-note">
+        <svg width="14" height="14" fill="none" stroke="#9ca3af" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Your information is private and used only to deliver relevant academic content.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTAL SECTION ── -->
+<section id="portal-section">
+
+  <div class="portal-banner">
+    <div class="portal-banner-inner">
+      <div class="welcome-text">
+        <h3>Welcome, <span id="student-name-display">Student</span>! 👋</h3>
+        <p>Access and download your subject-wise HSC 2026 suggestions below.</p>
+      </div>
+      <div class="portal-meta">
+        <div class="meta-chip"><span>📱</span> <span id="student-mobile-display"></span></div>
+        <div class="meta-chip"><span>🎓</span> <span id="student-class-display"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portal-body">
+
+    <div class="section-header">
+      <div class="section-title">Subject-wise Suggestions</div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-group="all">All Subjects</button>
+      <button class="filter-btn" data-group="compulsory">Compulsory</button>
+      <button class="filter-btn" data-group="science">Science</button>
+      <button class="filter-btn" data-group="business">Business Studies</button>
+      <button class="filter-btn" data-group="humanities">Humanities</button>
+    </div>
+
+    <!-- Subject cards grid -->
+    <div class="subjects-grid" id="subjects-grid"></div>
+
+  </div>
+</section>
+
+<!-- ── PDF MODAL ── -->
+<div id="pdf-modal">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-subject-tag" id="modal-group-tag"></div>
+        <div class="modal-title" id="modal-title">Subject Suggestion</div>
+      </div>
+      <button class="modal-close" id="modal-close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <iframe class="pdf-frame" id="pdf-frame" src="" allow="fullscreen"></iframe>
+    </div>
+    <div class="modal-footer">
+      <div class="modal-note">📄 Preview only — use the download button to save a copy.</div>
+      <a id="modal-download-btn" href="#" download class="btn-modal-download" target="_blank">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div id="toast"></div>
+
+<script>
+// ──────────────────────────────────────────────
+// DATA
+// ──────────────────────────────────────────────
+const subjects = [
+  {
+    id: 's1', title: 'Bangla 1st Paper', subtitle: 'বাংলা প্রথম পত্র',
+    group: 'compulsory', icon: '📖', color: '#3b82f6',
+    tags: ['Available', 'Hot'],
+    pages: '48 pages', updated: 'May 28, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms', // placeholder
+  },
+  {
+    id: 's2', title: 'Bangla 2nd Paper', subtitle: 'বাংলা দ্বিতীয় পত্র',
+    group: 'compulsory', icon: '✍️', color: '#8b5cf6',
+    tags: ['Available'],
+    pages: '36 pages', updated: 'May 28, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's3', title: 'English 1st Paper', subtitle: 'ইংরেজি প্রথম পত্র',
+    group: 'compulsory', icon: '🔤', color: '#0ea5e9',
+    tags: ['Available', 'New'],
+    pages: '52 pages', updated: 'May 30, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's4', title: 'English 2nd Paper', subtitle: 'ইংরেজি দ্বিতীয় পত্র',
+    group: 'compulsory', icon: '📝', color: '#06b6d4',
+    tags: ['Available'],
+    pages: '40 pages', updated: 'May 29, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's5', title: 'ICT', subtitle: 'তথ্য ও যোগাযোগ প্রযুক্তি',
+    group: 'compulsory', icon: '💻', color: '#10b981',
+    tags: ['Available', 'Hot'],
+    pages: '44 pages', updated: 'May 30, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's6', title: 'Physics 1st Paper', subtitle: 'পদার্থবিজ্ঞান প্রথম পত্র',
+    group: 'science', icon: '⚛️', color: '#f59e0b',
+    tags: ['Available'],
+    pages: '56 pages', updated: 'May 27, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's7', title: 'Physics 2nd Paper', subtitle: 'পদার্থবিজ্ঞান দ্বিতীয় পত্র',
+    group: 'science', icon: '🔭', color: '#f97316',
+    tags: ['Available'],
+    pages: '48 pages', updated: 'May 27, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's8', title: 'Chemistry 1st Paper', subtitle: 'রসায়ন প্রথম পত্র',
+    group: 'science', icon: '🧪', color: '#ec4899',
+    tags: ['Available', 'New'],
+    pages: '60 pages', updated: 'May 31, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's9', title: 'Chemistry 2nd Paper', subtitle: 'রসায়ন দ্বিতীয় পত্র',
+    group: 'science', icon: '⚗️', color: '#d946ef',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+  {
+    id: 's10', title: 'Biology 1st Paper', subtitle: 'জীববিজ্ঞান প্রথম পত্র',
+    group: 'science', icon: '🌿', color: '#22c55e',
+    tags: ['Available'],
+    pages: '58 pages', updated: 'May 26, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's11', title: 'Biology 2nd Paper', subtitle: 'জীববিজ্ঞান দ্বিতীয় পত্র',
+    group: 'science', icon: '🧬', color: '#16a34a',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+  {
+    id: 's12', title: 'Higher Mathematics 1st', subtitle: 'উচ্চতর গণিত প্রথম পত্র',
+    group: 'science', icon: '📐', color: '#6366f1',
+    tags: ['Available'],
+    pages: '50 pages', updated: 'May 28, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's13', title: 'Higher Mathematics 2nd', subtitle: 'উচ্চতর গণিত দ্বিতীয় পত্র',
+    group: 'science', icon: '🔢', color: '#7c3aed',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+  {
+    id: 's14', title: 'Accounting 1st Paper', subtitle: 'হিসাববিজ্ঞান প্রথম পত্র',
+    group: 'business', icon: '🧾', color: '#0284c7',
+    tags: ['Available'],
+    pages: '46 pages', updated: 'May 29, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's15', title: 'Accounting 2nd Paper', subtitle: 'হিসাববিজ্ঞান দ্বিতীয় পত্র',
+    group: 'business', icon: '📊', color: '#0369a1',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+  {
+    id: 's16', title: 'Business Organisation', subtitle: 'ব্যবসায় সংগঠন ও ব্যবস্থাপনা',
+    group: 'business', icon: '🏢', color: '#0891b2',
+    tags: ['Available'],
+    pages: '42 pages', updated: 'May 28, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's17', title: 'Economics 1st Paper', subtitle: 'অর্থনীতি প্রথম পত্র',
+    group: 'business', icon: '📈', color: '#15803d',
+    tags: ['Available', 'New'],
+    pages: '44 pages', updated: 'May 31, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's18', title: 'Islamic History', subtitle: 'ইসলামের ইতিহাস ও সংস্কৃতি',
+    group: 'humanities', icon: '📜', color: '#b45309',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+  {
+    id: 's19', title: 'Civics', subtitle: 'পৌরনীতি ও সুশাসন',
+    group: 'humanities', icon: '⚖️', color: '#92400e',
+    tags: ['Available'],
+    pages: '38 pages', updated: 'May 27, 2026', available: true,
+    driveId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms',
+  },
+  {
+    id: 's20', title: 'Logic', subtitle: 'যুক্তিবিদ্যা',
+    group: 'humanities', icon: '🧩', color: '#7c3aed',
+    tags: ['Coming Soon'],
+    pages: '—', updated: 'Soon', available: false,
+    driveId: '',
+  },
+];
+
+// ──────────────────────────────────────────────
+// VALIDATION
+// ──────────────────────────────────────────────
+function validateName(v) {
+  v = v.trim();
+  if (!v) return 'Name is required.';
+  if (!/^[a-zA-Zঀ-৿\s]+$/.test(v)) return 'Name must contain alphabetic characters only — no numbers or symbols.';
+  if (v.replace(/\s/g,'').length < 2) return 'Please enter your full name (at least 2 characters).';
+  return null;
+}
+
+function validateMobile(v) {
+  v = v.trim().replace(/\s/g,'');
+  if (!v) return 'Mobile number is required.';
+  if (!/^\d{10}$/.test(v)) return 'Enter exactly 10 digits (e.g. 1712345678).';
+  if (!/^(11|12|13|14|15|16|17|18|19)\d{8}$/.test(v)) return 'Enter a valid Bangladeshi number (e.g. 1712345678).';
+  return null;
+}
+
+function validateClass(v) {
+  if (!v) return 'Please select your HSC batch.';
+  return null;
+}
+
+function showError(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = '⚠ ' + msg;
+  el.classList.remove('hidden');
+}
+function clearError(id) {
+  document.getElementById(id).classList.add('hidden');
+}
+
+// ──────────────────────────────────────────────
+// FORM
+// ──────────────────────────────────────────────
+const form = document.getElementById('student-form');
+
+document.getElementById('full-name').addEventListener('input', function() {
+  const err = validateName(this.value);
+  if (err) showError('name-error', err); else clearError('name-error');
+});
+document.getElementById('mobile').addEventListener('input', function() {
+  this.value = this.value.replace(/\D/g,'').slice(0,10);
+  const err = validateMobile(this.value);
+  if (err) showError('mobile-error', err); else clearError('mobile-error');
+});
+document.getElementById('hsc-class').addEventListener('change', function() {
+  const err = validateClass(this.value);
+  if (err) showError('class-error', err); else clearError('class-error');
+});
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name   = document.getElementById('full-name').value;
+  const mobile = document.getElementById('mobile').value;
+  const cls    = document.getElementById('hsc-class').value;
+
+  const nameErr   = validateName(name);
+  const mobileErr = validateMobile(mobile);
+  const classErr  = validateClass(cls);
+
+  if (nameErr)   showError('name-error', nameErr);
+  if (mobileErr) showError('mobile-error', mobileErr);
+  if (classErr)  showError('class-error', classErr);
+
+  if (nameErr || mobileErr || classErr) return;
+
+  const student = { name: name.trim(), mobile: '+880' + mobile.trim(), cls };
+  localStorage.setItem('brritto_hsc_student', JSON.stringify(student));
+  openPortal(student);
+});
+
+// ──────────────────────────────────────────────
+// PORTAL
+// ──────────────────────────────────────────────
+function openPortal(student) {
+  document.getElementById('gate-section').style.display = 'none';
+  const portal = document.getElementById('portal-section');
+  portal.style.display = 'block';
+
+  document.getElementById('student-name-display').textContent = student.name.split(' ')[0];
+  document.getElementById('student-mobile-display').textContent = student.mobile;
+  document.getElementById('student-class-display').textContent = student.cls;
+
+  renderCards('all');
+  setupFilters();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  setTimeout(() => showToast('✅ Access granted! Enjoy your free suggestions.', 'success'), 400);
+}
+
+// ──────────────────────────────────────────────
+// CARDS
+// ──────────────────────────────────────────────
+const groupLabels = {
+  compulsory: 'Compulsory', science: 'Science',
+  business: 'Business Studies', humanities: 'Humanities'
+};
+
+function buildCard(s) {
+  const isAvail = s.available;
+  const tagHtml = s.tags.map(t => {
+    const cls = t === 'New' ? 'new' : t === 'Hot' ? 'hot' : '';
+    return `<span class="tag ${cls}">${t}</span>`;
+  }).join('');
+
+  const previewDisabled = !isAvail ? 'disabled title="Coming soon"' : '';
+  const downloadDisabled = !isAvail ? 'disabled title="Coming soon"' : '';
+
+  return `
+    <div class="subject-card ${isAvail ? '' : 'coming-soon'} fade-in" data-group="${s.group}">
+      <div class="card-color-bar" style="background:${s.color}"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="card-icon" style="background:${s.color}18">${s.icon}</div>
+          <div class="card-info">
+            <div class="card-group">${groupLabels[s.group]}</div>
+            <div class="card-title">${s.title}</div>
+            <div class="card-subtitle">${s.subtitle}</div>
+          </div>
+        </div>
+        <div class="card-tags">${tagHtml}</div>
+        <div class="card-actions">
+          <button class="btn-preview" ${previewDisabled} onclick="openPdf('${s.id}')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            Preview
+          </button>
+          <button class="btn-download" ${downloadDisabled} onclick="downloadPdf('${s.id}')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download
+          </button>
+        </div>
+      </div>
+      <div class="card-footer">
+        ${isAvail
+          ? `<span class="dot"></span> ${s.pages} · Updated ${s.updated}`
+          : `<span class="coming-label">⏳ Coming soon</span>`
+        }
+      </div>
+    </div>
+  `;
+}
+
+function renderCards(group) {
+  const grid = document.getElementById('subjects-grid');
+  const filtered = group === 'all' ? subjects : subjects.filter(s => s.group === group);
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty-state"><div class="icon">📭</div><p>No subjects in this category yet.</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(buildCard).join('');
+  // trigger fade-in
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 40);
+    });
+  });
+}
+
+function setupFilters() {
+  document.getElementById('filter-bar').addEventListener('click', function(e) {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCards(btn.dataset.group);
+  });
+}
+
+// ──────────────────────────────────────────────
+// PDF MODAL
+// ──────────────────────────────────────────────
+function getSubject(id) { return subjects.find(s => s.id === id); }
+
+function openPdf(id) {
+  const s = getSubject(id);
+  if (!s || !s.available) return;
+
+  const modal = document.getElementById('pdf-modal');
+  document.getElementById('modal-title').textContent = s.title + ' — One Shot Suggestion 2026';
+  document.getElementById('modal-group-tag').textContent = groupLabels[s.group];
+
+  // For real deployment replace with actual Google Drive file IDs
+  // Format: https://drive.google.com/file/d/FILE_ID/preview
+  const previewUrl = s.driveId
+    ? `https://drive.google.com/file/d/${s.driveId}/preview`
+    : '';
+  document.getElementById('pdf-frame').src = previewUrl;
+
+  const downloadUrl = s.driveId
+    ? `https://drive.google.com/uc?export=download&id=${s.driveId}`
+    : '#';
+  document.getElementById('modal-download-btn').href = downloadUrl;
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePdf() {
+  document.getElementById('pdf-modal').classList.remove('open');
+  document.getElementById('pdf-frame').src = '';
+  document.body.style.overflow = '';
+}
+
+function downloadPdf(id) {
+  const s = getSubject(id);
+  if (!s || !s.available) return;
+  if (!s.driveId) { showToast('PDF link not available yet.'); return; }
+  const url = `https://drive.google.com/uc?export=download&id=${s.driveId}`;
+  const a = document.createElement('a');
+  a.href = url; a.target = '_blank'; a.click();
+  showToast('⬇️ Download started!', 'success');
+}
+
+document.getElementById('modal-close-btn').addEventListener('click', closePdf);
+document.getElementById('modal-backdrop').addEventListener('click', closePdf);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePdf(); });
+
+// ──────────────────────────────────────────────
+// TOAST
+// ──────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = type ? `show ${type}` : 'show';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.className = ''; }, 3000);
+}
+
+// ──────────────────────────────────────────────
+// INIT — check localStorage on load
+// ──────────────────────────────────────────────
+(function init() {
+  try {
+    const stored = JSON.parse(localStorage.getItem('brritto_hsc_student'));
+    if (stored && stored.name && stored.mobile && stored.cls) {
+      // pre-fill form silently, then open portal
+      openPortal(stored);
+    }
+  } catch(_) {}
+})();
+</script>
+</body>
+</html>
