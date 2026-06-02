@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Student } from '../types';
 
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx6H6ym9YuQ4Vc5yt3X2K94ZgcsfvKfdo0rK1-V8uetm_ZUxryY6kTIKbQR1O-oN_tY1Q/exec';
+const SHEET_ENDPOINT = import.meta.env.VITE_SHEET_ENDPOINT as string;
 
 function validateName(v: string) {
   v = v.trim();
