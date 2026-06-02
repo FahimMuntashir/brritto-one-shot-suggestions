@@ -1,5 +1,5 @@
 [
-  
+  { "key": "compulsory", "label": "আবশ্যিক" },
   { "key": "science",    "label": "বিজ্ঞান" },
   { "key": "business",   "label": "ব্যবসায় শিক্ষা" },
   { "key": "humanities", "label": "মানবিক" }

@@ -270,7 +270,7 @@ body {
 .privacy-note .shield-icon { flex-shrink: 0; }
 
 /* ── PORTAL SECTION ── */
-#portal-section { display: none; background: var(--bg); min-height: 100vh; }
+#portal-section { background: var(--bg); min-height: 100vh; }
 
 .portal-banner {
   background: linear-gradient(135deg, #1E93DF 0%, #2563EB 100%);

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import type { Subject, Group, Student } from '../types';
 import SubjectCard from './SubjectCard';
 import PdfModal from './PdfModal';
@@ -14,12 +14,22 @@ interface Props {
 export default function Portal({ student, subjects, groups, groupLabels, onToast }: Props) {
   const [activeGroup, setActiveGroup] = useState('all');
   const [modalSubject, setModalSubject] = useState<Subject | null>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredSubjects = activeGroup === 'all'
     ? subjects
     : activeGroup === 'compulsory'
       ? subjects.filter(s => s.group === 'compulsory')
       : subjects.filter(s => s.group === activeGroup || s.group === 'compulsory');
+
+  /* trigger fade-in animation after each render */
+  useEffect(() => {
+    const cards = gridRef.current?.querySelectorAll<HTMLElement>('.fade-in');
+    cards?.forEach((el, i) => {
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), i * 40);
+    });
+  }, [filteredSubjects]);
 
   const handlePreview = useCallback((id: string) => {
     const s = subjects.find(s => s.id === id);
@@ -38,7 +48,7 @@ export default function Portal({ student, subjects, groups, groupLabels, onToast
   }, [subjects, onToast]);
 
   return (
-    <section id="portal-section" style={{ display: 'block' }}>
+    <section id="portal-section">
 
       <div className="portal-banner">
         <div className="portal-banner-inner">
@@ -76,7 +86,7 @@ export default function Portal({ student, subjects, groups, groupLabels, onToast
           ))}
         </div>
 
-        <div className="subjects-grid">
+        <div className="subjects-grid" ref={gridRef}>
           {filteredSubjects.length === 0 ? (
             <div className="empty-state">
               <div className="icon">📭</div>
