@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSC One Shot Suggestion Class | Brritto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── GATE SECTION ── -->
+<section id="gate-section">
+
+  <!-- background blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+  <div class="bg-blob blob-4"></div>
+  <div class="bg-blob blob-5"></div>
+  <div class="bg-blob blob-6"></div>
+  <div class="bg-blob blob-7"></div>
+  <div class="bg-blob blob-8"></div>
+
+  <!-- floating badges -->
+  <div class="float-badge badge-bulb">💡</div>
+  <div class="float-badge badge-timer">⏱</div>
+  <div class="float-badge badge-book">🎓</div>
+
+  <!-- logo -->
+  <div class="logo-area">
+    <img src="assets/logo.png" alt="One Shot Suggestion Class" class="main-logo" />
+  </div>
+
+  <!-- form card -->
+  <div class="form-card">
+
+    <!-- heading inside card -->
+    <div class="card-heading">
+      <div class="heading-main">
+        তোমার ফ্রি সাজেশন পেতে<br>
+        তথ্য দিয়ে এক্সেস করো <span class="yellow-mark">👆</span>
+      </div>
+      <p class="heading-desc">
+        তোমার তথ্য দিলে সকল বিষয়ের HSC সাজেশন PDF গুলো অফিসিয়ালভাবে ডাউনলোড করতে পারবে — এক্সেস <strong>ফ্রি!</strong>
+      </p>
+    </div>
+
+    <form id="student-form" novalidate>
+
+      <!-- name -->
+      <div class="form-group">
+        <label class="form-label" for="full-name">
+          তোমার নাম <span class="req">*</span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="7" r="4"/>
+              <path d="M5.5 21a6.5 6.5 0 0113 0"/>
+            </svg>
+          </span>
+          <input type="text" id="full-name" class="form-input"
+            placeholder="নামঃ ফাহিম মুনতাসির"
+            autocomplete="name" />
+        </div>
+        <div class="field-error hidden" id="name-error"></div>
+      </div>
+
+      <!-- mobile -->
+      <div class="form-group">
+        <label class="form-label" for="mobile">
+          মোবাইল নম্বর <span class="req">*</span>
+          <span class="hint">(বাংলাদেশী নম্বর)</span>
+        </label>
+        <div class="phone-row">
+          <div class="phone-prefix">
+            <span class="flag">🇧🇩</span>
+            +880
+          </div>
+          <input type="tel" id="mobile" class="form-input"
+            placeholder="17XXXXXXXX"
+            maxlength="10"
+            autocomplete="tel" />
+        </div>
+        <div class="field-error hidden" id="mobile-error"></div>
+      </div>
+
+      <!-- hsc year -->
+      <div class="form-group">
+        <label class="form-label" for="hsc-class">
+          তোমার HSC বছর <span class="req">*</span>
+        </label>
+        <div class="select-wrap">
+          <span class="select-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+          </span>
+          <select id="hsc-class" class="form-select">
+            <option value="" disabled selected>তোমার বছর নির্বাচন করুন</option>
+            <option value="HSC 2026">HSC 2026</option>
+            <option value="HSC 2027">HSC 2027</option>
+            <option value="HSC 2028">HSC 2028</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+        <div class="field-error hidden" id="class-error"></div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submit-btn">
+        <span class="bolt">⚡</span>
+        ফ্রি সাজেশন ডাউনলোড করুন
+      </button>
+
+    </form>
+
+    <div class="privacy-note">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" class="shield-icon">
+        <path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V6l-8-4z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+        <path d="M9 12l2 2 4-4" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>তোমার তথ্য সম্পূর্ণ নিরাপদ এবং শুধুমাত্র একাডেমিক কন্টেন্ট সরবরাহের জন্য ব্যবহার করা হবে।</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── PORTAL SECTION ── -->
+<section id="portal-section">
+
+  <div class="portal-banner">
+    <div class="portal-banner-inner">
+      <div class="welcome-text">
+        <h3>স্বাগতম, <span id="student-name-display">Student</span>! 👋</h3>
+        <p>নিচে থেকে তোমার HSC 2026 বিষয়ভিত্তিক সাজেশনগুলো ডাউনলোড করো।</p>
+      </div>
+      <div class="portal-meta">
+        <div class="meta-chip"><span>📱</span> <span id="student-mobile-display"></span></div>
+        <div class="meta-chip"><span>🎓</span> <span id="student-class-display"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portal-body">
+    <div class="section-header">
+      <div class="section-title">বিষয়ভিত্তিক সাজেশন</div>
+    </div>
+
+    <div class="filter-bar" id="filter-bar"></div>
+
+    <div class="subjects-grid" id="subjects-grid"></div>
+  </div>
+
+</section>
+
+<!-- ── PDF MODAL ── -->
+<div id="pdf-modal">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-subject-tag" id="modal-group-tag"></div>
+        <div class="modal-title" id="modal-title">Subject Suggestion</div>
+      </div>
+      <button class="modal-close" id="modal-close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <iframe class="pdf-frame" id="pdf-frame" src="" allow="fullscreen"></iframe>
+    </div>
+    <div class="modal-footer">
+      <div class="modal-note">📄 Preview only — use the download button to save a copy.</div>
+      <a id="modal-download-btn" href="#" download class="btn-modal-download" target="_blank">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
