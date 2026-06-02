@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #E8390E;
-  --primary-dark: #c22d08;
-  --primary-light: #ff6b3d;
+  --primary: #2563EB;
+  --primary-dark: #1d4ed8;
+  --primary-light: #60a5fa;
   --surface: #ffffff;
-  --bg: #f5f6fa;
-  --text: #1a1a2e;
+  --bg: #f0f6ff;
+  --text: #0f172a;
   --text-muted: #6b7280;
   --border: #e5e7eb;
   --success: #10b981;
@@ -273,9 +273,9 @@ body {
 #portal-section { display: none; background: var(--bg); min-height: 100vh; }
 
 .portal-banner {
-  background: linear-gradient(135deg, #0f2027, #1a3a4e);
+  background: linear-gradient(135deg, #1E93DF 0%, #2563EB 100%);
   padding: 28px 24px;
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 3px solid #1d4ed8;
 }
 .portal-banner-inner {
   max-width: 1100px; margin: 0 auto;
@@ -386,7 +386,7 @@ body {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
 .modal-title { font-size: 16px; font-weight: 700; }
-.modal-subject-tag { font-size: 11px; font-weight: 600; background: #fff3f0; color: var(--primary); padding: 3px 10px; border-radius: 20px; }
+.modal-subject-tag { font-size: 11px; font-weight: 600; background: #eff6ff; color: var(--primary); padding: 3px 10px; border-radius: 20px; }
 .modal-close {
   width: 32px; height: 32px; border-radius: 8px; background: #f3f4f6; border: none;
   cursor: pointer; display: flex; align-items: center; justify-content: center;
