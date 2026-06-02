@@ -109,41 +109,30 @@ function openPortal(student) {
 /* ── Cards ── */
 function buildCard(s) {
   const isAvail = s.available;
-  const tagHtml = s.tags.map(t => {
-    const cls = t === 'New' ? 'new' : t === 'Hot' ? 'hot' : '';
-    return `<span class="tag ${cls}">${t}</span>`;
-  }).join('');
-  const dis = !isAvail ? 'disabled title="Coming soon"' : '';
+  const dis = !isAvail ? 'disabled' : '';
   return `
     <div class="subject-card ${isAvail ? '' : 'coming-soon'} fade-in" data-group="${s.group}">
-      <div class="card-color-bar" style="background:${s.color}"></div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-icon" style="background:${s.color}18">${s.icon}</div>
+          <div class="card-icon">${s.icon}</div>
           <div class="card-info">
             <div class="card-group">${groupLabels[s.group] || s.group}</div>
             <div class="card-title">${s.title}</div>
             <div class="card-subtitle">${s.subtitle}</div>
           </div>
         </div>
-        <div class="card-tags">${tagHtml}</div>
         <div class="card-actions">
           <button class="btn-preview" ${dis} onclick="openPdf('${s.id}')">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            Preview
+            প্রিভিউ
           </button>
           <button class="btn-download" ${dis} onclick="downloadPdf('${s.id}')">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download
+            ডাউনলোড
           </button>
         </div>
       </div>
-      <div class="card-footer">
-        ${isAvail
-          ? `<span class="dot"></span> ${s.pages} · Updated ${s.updated}`
-          : `<span class="coming-label">⏳ Coming soon</span>`
-        }
-      </div>
+      ${!isAvail ? `<div class="card-footer"><span class="coming-label">⏳ শীঘ্রই আসছে</span></div>` : ''}
     </div>
   `;
 }
@@ -151,13 +140,21 @@ function buildCard(s) {
 function renderCards(group) {
   const grid = document.getElementById('subjects-grid');
 
-  /* show skeleton while loading */
   if (!subjects.length) {
     grid.innerHTML = `<div class="empty-state"><div class="icon">⏳</div><p>লোড হচ্ছে...</p></div>`;
     return;
   }
 
-  const list = group === 'all' ? subjects : subjects.filter(s => s.group === group);
+  let list;
+  if (group === 'all') {
+    list = subjects;
+  } else if (group === 'compulsory') {
+    list = subjects.filter(s => s.group === 'compulsory');
+  } else {
+    /* include compulsory (common) subjects in every group filter */
+    list = subjects.filter(s => s.group === group || s.group === 'compulsory');
+  }
+
   if (!list.length) {
     grid.innerHTML = `<div class="empty-state"><div class="icon">📭</div><p>এই ক্যাটাগরিতে এখনো কোনো বিষয় নেই।</p></div>`;
     return;

@@ -1,94 +1,272 @@
 [
   {
     "id": "s1",
-    "title": "Bangla 1st Paper",
-    "subtitle": "বাংলা প্রথম পত্র",
+    "title": "বাংলা ১ম পত্র",
+    "subtitle": "Bangla 1st Paper",
     "group": "compulsory",
     "icon": "📖",
-    "color": "#3b82f6",
-    "tags": ["Available", "Hot"],
-    "pages": "48 pages",
-    "updated": "May 28, 2026",
-    "available": true,
-    "type": "docs",
-    "driveId": "15E7-rnju-3i-bJMTKyjC9dLEu6bFRdxW1Xb4zXBW4zQ"
+    "available": false,
+    "driveId": ""
   },
   {
     "id": "s2",
-    "title": "Bangla 2nd Paper",
-    "subtitle": "বাংলা দ্বিতীয় পত্র",
+    "title": "বাংলা ২য় পত্র",
+    "subtitle": "Bangla 2nd Paper",
     "group": "compulsory",
-    "icon": "✍️",
-    "color": "#8b5cf6",
-    "tags": ["Available"],
-    "pages": "36 pages",
-    "updated": "May 28, 2026",
-    "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "icon": "📖",
+    "available": false,
+    "driveId": ""
   },
   {
     "id": "s3",
-    "title": "English 1st Paper",
-    "subtitle": "ইংরেজি প্রথম পত্র",
+    "title": "ইংরেজী ১ম পত্র",
+    "subtitle": "English 1st Paper",
     "group": "compulsory",
-    "icon": "🔤",
-    "color": "#0ea5e9",
-    "tags": ["Available", "New"],
-    "pages": "52 pages",
-    "updated": "May 30, 2026",
+    "icon": "📘",
     "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "driveId": "1q2qwKz-MvsHt05PTtnX0wyKsp5J01kRH"
   },
   {
     "id": "s4",
-    "title": "English 2nd Paper",
-    "subtitle": "ইংরেজি দ্বিতীয় পত্র",
+    "title": "ইংরেজী ২য় পত্র",
+    "subtitle": "English 2nd Paper",
     "group": "compulsory",
-    "icon": "📝",
-    "color": "#06b6d4",
-    "tags": ["Available"],
-    "pages": "40 pages",
-    "updated": "May 29, 2026",
+    "icon": "📘",
     "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "driveId": "1PlsKjlN77qjslvTcPUvktD82XDULM3Pr"
   },
   {
     "id": "s5",
-    "title": "ICT",
-    "subtitle": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "title": "ইংরেজী লিখিত পার্ট",
+    "subtitle": "English Written Part",
     "group": "compulsory",
-    "icon": "💻",
-    "color": "#10b981",
-    "tags": ["Available", "Hot"],
-    "pages": "44 pages",
-    "updated": "May 30, 2026",
+    "icon": "📕",
     "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "driveId": "1VEa_g7fYKNhGLtn-0UUfSLk5p8rq6UMb"
   },
   {
     "id": "s6",
-    "title": "Physics 1st Paper",
-    "subtitle": "পদার্থবিজ্ঞান প্রথম পত্র",
-    "group": "science",
-    "icon": "⚛️",
-    "color": "#f59e0b",
-    "tags": ["Available"],
-    "pages": "56 pages",
-    "updated": "May 27, 2026",
-    "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "title": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "subtitle": "ICT - Information and Communication Technology",
+    "group": "compulsory",
+    "icon": "🖥️",
+    "available": false,
+    "driveId": ""
   },
   {
     "id": "s7",
-    "title": "Physics 2nd Paper",
-    "subtitle": "পদার্থবিজ্ঞান দ্বিতীয় পত্র",
+    "title": "পদার্থবিজ্ঞান ১ম পত্র",
+    "subtitle": "Physics 1st Paper",
     "group": "science",
-    "icon": "🔭",
-    "color": "#f97316",
-    "tags": ["Available"],
-    "pages": "48 pages",
-    "updated": "May 27, 2026",
+    "icon": "🧲",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s8",
+    "title": "পদার্থবিজ্ঞান ২য় পত্র",
+    "subtitle": "Physics 2nd Paper",
+    "group": "science",
+    "icon": "🧲",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s9",
+    "title": "রসায়ন ১ম পত্র",
+    "subtitle": "Chemistry 1st Paper",
+    "group": "science",
+    "icon": "🧪",
     "available": true,
-    "driveId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+    "driveId": "1yO2gc7gF6CjGxEO0vsYiuL4QqY9-sCWT"
+  },
+  {
+    "id": "s10",
+    "title": "রসায়ন ২য় পত্র",
+    "subtitle": "Chemistry 2nd Paper",
+    "group": "science",
+    "icon": "🧪",
+    "available": true,
+    "driveId": "1aTZxXjExGOmPLTYWHCRi_Irg5TRwMowH"
+  },
+  {
+    "id": "s11",
+    "title": "উচ্চতর গণিত ১ম পত্র",
+    "subtitle": "Higher Math 1st Paper",
+    "group": "science",
+    "icon": "📐",
+    "available": true,
+    "driveId": "1vAL60nj27lvg79nralLlJV6lNxmrFooV"
+  },
+  {
+    "id": "s12",
+    "title": "উচ্চতর গণিত ২য় পত্র",
+    "subtitle": "Higher Math 2nd Paper",
+    "group": "science",
+    "icon": "📐",
+    "available": true,
+    "driveId": "1xjzJaBXVwOwyTSR3b3Qgm0p2R1fGGstt"
+  },
+  {
+    "id": "s13",
+    "title": "জীববিজ্ঞান ১ম পত্র",
+    "subtitle": "Biology 1st Paper",
+    "group": "science",
+    "icon": "🔬",
+    "available": true,
+    "driveId": "11XlHeFaVliVI56IsCOHKBX7XDDZZ-wJu"
+  },
+  {
+    "id": "s14",
+    "title": "জীববিজ্ঞান ২য় পত্র",
+    "subtitle": "Biology 2nd Paper",
+    "group": "science",
+    "icon": "🔬",
+    "available": true,
+    "driveId": "1k2EE87BW4YK_GURNAEzsZ6Yf-JLIXe1S"
+  },
+  {
+    "id": "s15",
+    "title": "হিসাববিজ্ঞান ১ম পত্র",
+    "subtitle": "Accounting 1st Paper",
+    "group": "business",
+    "icon": "🏦",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s16",
+    "title": "হিসাববিজ্ঞান ২য় পত্র",
+    "subtitle": "Accounting 2nd Paper",
+    "group": "business",
+    "icon": "🏦",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s17",
+    "title": "ফিন্যান্স, ব্যাংকিং ও বিমা ১ম পত্র",
+    "subtitle": "Finance 1st Paper",
+    "group": "business",
+    "icon": "💸",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s18",
+    "title": "ফিন্যান্স, ব্যাংকিং ও বিমা ২য় পত্র",
+    "subtitle": "Finance 2nd Paper",
+    "group": "business",
+    "icon": "💸",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s19",
+    "title": "ব্যবসায় সংগঠন ও ব্যবস্থাপনা ১ম পত্র",
+    "subtitle": "Business Management 1st Paper",
+    "group": "business",
+    "icon": "💼",
+    "available": true,
+    "driveId": "1QxnULtzOi9-6ywtTvNLiu3Jl61KRI-1k"
+  },
+  {
+    "id": "s20",
+    "title": "ব্যবসায় সংগঠন ও ব্যবস্থাপনা ২য় পত্র",
+    "subtitle": "Business Management 2nd Paper",
+    "group": "business",
+    "icon": "💼",
+    "available": true,
+    "driveId": "1mZ_5qvctuO11DjtLs8pWJpIQSUPASWtU"
+  },
+  {
+    "id": "s21",
+    "title": "উৎপাদন ব্যবস্থাপনা ও বিপণন ১ম পত্র",
+    "subtitle": "Marketing 1st Paper",
+    "group": "business",
+    "icon": "📢",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s22",
+    "title": "উৎপাদন ব্যবস্থাপনা ও বিপণন ২য় পত্র",
+    "subtitle": "Marketing 2nd Paper",
+    "group": "business",
+    "icon": "📢",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s23",
+    "title": "পৌরনীতি ও সুশাসন ১ম পত্র",
+    "subtitle": "Civics 1st Paper",
+    "group": "humanities",
+    "icon": "⚖️",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s24",
+    "title": "পৌরনীতি ও সুশাসন ২য় পত্র",
+    "subtitle": "Civics 2nd Paper",
+    "group": "humanities",
+    "icon": "⚖️",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s25",
+    "title": "ইতিহাস ১ম পত্র",
+    "subtitle": "History 1st Paper",
+    "group": "humanities",
+    "icon": "📜",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s26",
+    "title": "ইতিহাস ২য় পত্র",
+    "subtitle": "History 2nd Paper",
+    "group": "humanities",
+    "icon": "📜",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s27",
+    "title": "অর্থনীতি ১ম পত্র",
+    "subtitle": "Economics 1st Paper",
+    "group": "humanities",
+    "icon": "💰",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s28",
+    "title": "অর্থনীতি ২য় পত্র",
+    "subtitle": "Economics 2nd Paper",
+    "group": "humanities",
+    "icon": "💰",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s29",
+    "title": "ভূগোল ১ম পত্র",
+    "subtitle": "Geography 1st Paper",
+    "group": "humanities",
+    "icon": "🗺️",
+    "available": false,
+    "driveId": ""
+  },
+  {
+    "id": "s30",
+    "title": "ভূগোল ২য় পত্র",
+    "subtitle": "Geography 2nd Paper",
+    "group": "humanities",
+    "icon": "🗺️",
+    "available": false,
+    "driveId": ""
   }
 ]
