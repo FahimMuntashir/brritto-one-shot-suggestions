@@ -112,9 +112,10 @@ function buildCard(s) {
   const dis = !isAvail ? 'disabled' : '';
   return `
     <div class="subject-card ${isAvail ? '' : 'coming-soon'} fade-in" data-group="${s.group}">
+      <div class="card-color-bar" style="background:${s.color}"></div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-icon">${s.icon}</div>
+          <div class="card-icon" style="background:${s.color}18; color:${s.color}">${s.icon}</div>
           <div class="card-info">
             <div class="card-group">${groupLabels[s.group] || s.group}</div>
             <div class="card-title">${s.title}</div>

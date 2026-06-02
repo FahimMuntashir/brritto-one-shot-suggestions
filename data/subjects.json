@@ -5,6 +5,7 @@
     "subtitle": "Bangla 1st Paper",
     "group": "compulsory",
     "icon": "📖",
+    "color": "#3b82f6",
     "available": false,
     "driveId": ""
   },
@@ -14,6 +15,7 @@
     "subtitle": "Bangla 2nd Paper",
     "group": "compulsory",
     "icon": "📖",
+    "color": "#6366f1",
     "available": false,
     "driveId": ""
   },
@@ -23,6 +25,7 @@
     "subtitle": "English 1st Paper",
     "group": "compulsory",
     "icon": "📘",
+    "color": "#0ea5e9",
     "available": true,
     "driveId": "1q2qwKz-MvsHt05PTtnX0wyKsp5J01kRH"
   },
@@ -32,6 +35,7 @@
     "subtitle": "English 2nd Paper",
     "group": "compulsory",
     "icon": "📘",
+    "color": "#06b6d4",
     "available": true,
     "driveId": "1PlsKjlN77qjslvTcPUvktD82XDULM3Pr"
   },
@@ -41,6 +45,7 @@
     "subtitle": "English Written Part",
     "group": "compulsory",
     "icon": "📕",
+    "color": "#0284c7",
     "available": true,
     "driveId": "1VEa_g7fYKNhGLtn-0UUfSLk5p8rq6UMb"
   },
@@ -50,6 +55,7 @@
     "subtitle": "ICT - Information and Communication Technology",
     "group": "compulsory",
     "icon": "🖥️",
+    "color": "#10b981",
     "available": false,
     "driveId": ""
   },
@@ -59,6 +65,7 @@
     "subtitle": "Physics 1st Paper",
     "group": "science",
     "icon": "🧲",
+    "color": "#f59e0b",
     "available": false,
     "driveId": ""
   },
@@ -68,6 +75,7 @@
     "subtitle": "Physics 2nd Paper",
     "group": "science",
     "icon": "🧲",
+    "color": "#f97316",
     "available": false,
     "driveId": ""
   },
@@ -77,6 +85,7 @@
     "subtitle": "Chemistry 1st Paper",
     "group": "science",
     "icon": "🧪",
+    "color": "#ec4899",
     "available": true,
     "driveId": "1yO2gc7gF6CjGxEO0vsYiuL4QqY9-sCWT"
   },
@@ -86,6 +95,7 @@
     "subtitle": "Chemistry 2nd Paper",
     "group": "science",
     "icon": "🧪",
+    "color": "#d946ef",
     "available": true,
     "driveId": "1aTZxXjExGOmPLTYWHCRi_Irg5TRwMowH"
   },
@@ -95,6 +105,7 @@
     "subtitle": "Higher Math 1st Paper",
     "group": "science",
     "icon": "📐",
+    "color": "#8b5cf6",
     "available": true,
     "driveId": "1vAL60nj27lvg79nralLlJV6lNxmrFooV"
   },
@@ -104,6 +115,7 @@
     "subtitle": "Higher Math 2nd Paper",
     "group": "science",
     "icon": "📐",
+    "color": "#7c3aed",
     "available": true,
     "driveId": "1xjzJaBXVwOwyTSR3b3Qgm0p2R1fGGstt"
   },
@@ -113,6 +125,7 @@
     "subtitle": "Biology 1st Paper",
     "group": "science",
     "icon": "🔬",
+    "color": "#22c55e",
     "available": true,
     "driveId": "11XlHeFaVliVI56IsCOHKBX7XDDZZ-wJu"
   },
@@ -122,6 +135,7 @@
     "subtitle": "Biology 2nd Paper",
     "group": "science",
     "icon": "🔬",
+    "color": "#16a34a",
     "available": true,
     "driveId": "1k2EE87BW4YK_GURNAEzsZ6Yf-JLIXe1S"
   },
@@ -131,6 +145,7 @@
     "subtitle": "Accounting 1st Paper",
     "group": "business",
     "icon": "🏦",
+    "color": "#0284c7",
     "available": false,
     "driveId": ""
   },
@@ -140,6 +155,7 @@
     "subtitle": "Accounting 2nd Paper",
     "group": "business",
     "icon": "🏦",
+    "color": "#0369a1",
     "available": false,
     "driveId": ""
   },
@@ -149,6 +165,7 @@
     "subtitle": "Finance 1st Paper",
     "group": "business",
     "icon": "💸",
+    "color": "#0891b2",
     "available": false,
     "driveId": ""
   },
@@ -158,6 +175,7 @@
     "subtitle": "Finance 2nd Paper",
     "group": "business",
     "icon": "💸",
+    "color": "#0e7490",
     "available": false,
     "driveId": ""
   },
@@ -167,6 +185,7 @@
     "subtitle": "Business Management 1st Paper",
     "group": "business",
     "icon": "💼",
+    "color": "#2563eb",
     "available": true,
     "driveId": "1QxnULtzOi9-6ywtTvNLiu3Jl61KRI-1k"
   },
@@ -176,6 +195,7 @@
     "subtitle": "Business Management 2nd Paper",
     "group": "business",
     "icon": "💼",
+    "color": "#1d4ed8",
     "available": true,
     "driveId": "1mZ_5qvctuO11DjtLs8pWJpIQSUPASWtU"
   },
@@ -185,6 +205,7 @@
     "subtitle": "Marketing 1st Paper",
     "group": "business",
     "icon": "📢",
+    "color": "#f97316",
     "available": false,
     "driveId": ""
   },
@@ -194,6 +215,7 @@
     "subtitle": "Marketing 2nd Paper",
     "group": "business",
     "icon": "📢",
+    "color": "#ea580c",
     "available": false,
     "driveId": ""
   },
@@ -203,6 +225,7 @@
     "subtitle": "Civics 1st Paper",
     "group": "humanities",
     "icon": "⚖️",
+    "color": "#92400e",
     "available": false,
     "driveId": ""
   },
@@ -212,6 +235,7 @@
     "subtitle": "Civics 2nd Paper",
     "group": "humanities",
     "icon": "⚖️",
+    "color": "#b45309",
     "available": false,
     "driveId": ""
   },
@@ -221,6 +245,7 @@
     "subtitle": "History 1st Paper",
     "group": "humanities",
     "icon": "📜",
+    "color": "#d97706",
     "available": false,
     "driveId": ""
   },
@@ -230,6 +255,7 @@
     "subtitle": "History 2nd Paper",
     "group": "humanities",
     "icon": "📜",
+    "color": "#ca8a04",
     "available": false,
     "driveId": ""
   },
@@ -239,6 +265,7 @@
     "subtitle": "Economics 1st Paper",
     "group": "humanities",
     "icon": "💰",
+    "color": "#15803d",
     "available": false,
     "driveId": ""
   },
@@ -248,6 +275,7 @@
     "subtitle": "Economics 2nd Paper",
     "group": "humanities",
     "icon": "💰",
+    "color": "#16a34a",
     "available": false,
     "driveId": ""
   },
@@ -257,6 +285,7 @@
     "subtitle": "Geography 1st Paper",
     "group": "humanities",
     "icon": "🗺️",
+    "color": "#0d9488",
     "available": false,
     "driveId": ""
   },
@@ -266,6 +295,7 @@
     "subtitle": "Geography 2nd Paper",
     "group": "humanities",
     "icon": "🗺️",
+    "color": "#0f766e",
     "available": false,
     "driveId": ""
   }
