@@ -18,7 +18,7 @@
 
 function doPost(e) {
   try {
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('User Data');
 
     /* add header row if this is the very first entry */
     if (sheet.getLastRow() === 0) {
