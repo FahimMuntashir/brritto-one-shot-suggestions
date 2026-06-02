@@ -1,5 +1,5 @@
 /* ── CONFIG: paste your deployed Apps Script Web App URL here ── */
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzuB-uhtAeJ_SNsS8fFn_Bz5ejAupe45sAOfxj7d61a1j73cfMBUSqll3NBE9ARt6w/exec';
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx6H6ym9YuQ4Vc5yt3X2K94ZgcsfvKfdo0rK1-V8uetm_ZUxryY6kTIKbQR1O-oN_tY1Q/exec';
 
 /* ── Data — loaded from JSON ── */
 let subjects = [];
